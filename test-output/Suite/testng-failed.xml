@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="loungePro.testcases.SuperAdminDashboardTest">
+      <class name="loungePro.testcases.GeneralDashBoardTest">
         <methods>
-          <include name="verifyCorrectUserName"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="verifyNumberOfCompanies"/>
         </methods>
-      </class> <!-- loungePro.testcases.SuperAdminDashboardTest -->
+      </class> <!-- loungePro.testcases.GeneralDashBoardTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

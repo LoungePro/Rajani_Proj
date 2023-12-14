@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import loungePro.base.TestBase;
+import loungePro.pages.GeneralDashboardPage;
 import loungePro.pages.LogInPage;
 import loungePro.pages.SuperAdminDashboardPage;
 
@@ -29,6 +30,8 @@ public class SuperAdminDashboardTest extends TestBase {
 		logInPage = new LogInPage();
 		saDashPage = new SuperAdminDashboardPage();
 		saDashPage = logInPage.checkIn(properties.getProperty("userID"), properties.getProperty("password"));
+		
+		
 	}
 
 	@AfterMethod(alwaysRun = true)
@@ -53,14 +56,57 @@ public class SuperAdminDashboardTest extends TestBase {
 
 	@Test(priority = 1, enabled = false)
 	public void verifyCorrectUserRole() {
-		String actualUserRole=saDashPage.getUserRole();		
+		String actualUserRole = saDashPage.getUserRole();
 		Assert.assertEquals(actualUserRole, properties.getProperty("role"), "Correct User Role is not displayed");
 	}
-	
+
 	@Test(priority = 1, enabled = false)
 	public void verifyCorrectUserName() {
-		String actualUserID=saDashPage.getUserName();	
+		String actualUserID = saDashPage.getUserName();
 		System.out.println("user=" + actualUserID);
 		Assert.assertEquals(actualUserID, properties.getProperty("userID"), "Correct User Name not displayed");
 	}
+
+	@Test(priority = 1, groups = { "Smoke" }, enabled = false)
+	public void verifyCompanyTab() {
+
+		Assert.assertEquals(saDashPage.checkTabCompany(), "Company");
+
+	}
+
+	@Test(priority = 1, groups = { "Smoke" }, enabled = false)
+	public void verifyRolesTab() {
+
+		Assert.assertEquals(saDashPage.checkTabRoles(), "Roles");
+
+	}
+
+	@Test(priority = 1, groups = { "Smoke" }, enabled = false)
+	public void verifyUsersTab() {
+
+		Assert.assertEquals(saDashPage.checkTabUsers(), "Users");
+
+	}
+
+	@Test(priority = 1, groups = { "Smoke" })
+	public void verifyPermissionsTab() {
+
+		Assert.assertEquals(saDashPage.checkTabPermissions(), "Permissions");
+
+	}
+
+	@Test(priority = 1, groups = { "Smoke" })
+	public void verifyLocationsTab() {
+
+		Assert.assertEquals(saDashPage.checkTabLocations(), "Locations");
+
+	}
+
+	@Test(priority = 1, groups = { "Smoke" })
+	public void verifyManagerLogTab() {
+
+		Assert.assertEquals(saDashPage.checkTabViewAndManageLocation(), "View & Manage Location");
+
+	}
+
 }

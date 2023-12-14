@@ -22,10 +22,13 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import loungePro.pages.CreateCompanyPage;
+import loungePro.pages.GeneralDashboardPage;
 import loungePro.pages.LogInPage;
 import loungePro.pages.PassengerBreakdownPage;
 import loungePro.pages.RegistrationPage;
 import loungePro.pages.SuperAdminDashboardPage;
+import loungePro.pages.SuperAdminLocationPage;
 import loungePro.utilities.Utility;
 
 /**
@@ -42,6 +45,10 @@ public class TestBase {
 	public static ChromeOptions options;
 	public static PassengerBreakdownPage passBreakPage;
 	public static RegistrationPage registrationPage;
+	public static GeneralDashboardPage dashboardPage;
+	public static GeneralDashboardPage generalDashBoardpPage;
+	public static SuperAdminLocationPage superAdminLocationPage;
+	public static CreateCompanyPage createCompanyPage;
 
 	public TestBase() {
 		properties = new Properties();
@@ -69,10 +76,11 @@ public class TestBase {
 		options.setExperimentalOption("prefs", prefsMap);
 		options.addArguments("--test-type");
 		options.addArguments("--disable-extensions");
+		options.addArguments("remote-allow-origins");
 		String browserName = properties.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();

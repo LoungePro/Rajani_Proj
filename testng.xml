@@ -5,9 +5,10 @@
 		<listener class-name="loungePro.base.Listeners"></listener>	</listeners>  <test thread-count="5" name="Test">
     <classes>
       <class name="loungePro.testcases.SuperAdminDashboardTest"/>
-      <!--class name="loungePro.testcases.PassengerBreakdownTest"/-->
-      <!--class name="loungePro.testcases.RegistrationTest"/-->
+      <class name="loungePro.testcases.PassengerBreakdownTest"/>
+      <class name="loungePro.testcases.RegistrationTest"/>
       <class name="loungePro.testcases.LogInPageTest"/>
+      <class name="loungePro.testcases.GeneralDashBoardTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

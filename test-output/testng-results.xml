@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="2" total="6" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-30T16:34:04 IST" name="Default suite" finished-at="2023-11-30T16:35:17 IST" duration-ms="72729">
+  <suite started-at="2023-12-13T19:26:20 IST" name="Default suite" finished-at="2023-12-13T19:28:31 IST" duration-ms="130906">
     <groups>
     </groups>
-    <test started-at="2023-11-30T16:34:04 IST" name="Default test" finished-at="2023-11-30T16:35:17 IST" duration-ms="72729">
+    <test started-at="2023-12-13T19:26:20 IST" name="Default test" finished-at="2023-12-13T19:28:31 IST" duration-ms="130906">
       <class name="loungePro.testcases.RegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:04 IST" name="setUp" finished-at="2023-11-30T16:34:12 IST" duration-ms="7600" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:26:20 IST" name="setUp" finished-at="2023-12-13T19:26:30 IST" duration-ms="10029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyOldRegCount()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:12 IST" name="verifyOldRegCount" finished-at="2023-11-30T16:34:30 IST" duration-ms="17795" status="PASS">
+        <test-method signature="verifyCancelButton()[pri:2, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:26:30 IST" name="verifyCancelButton" finished-at="2023-12-13T19:27:00 IST" duration-ms="30126" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOldRegCount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:30 IST" name="tearDown" finished-at="2023-11-30T16:34:30 IST" duration-ms="152" status="PASS">
+        </test-method> <!-- verifyCancelButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:27:00 IST" name="tearDown" finished-at="2023-12-13T19:27:02 IST" duration-ms="1390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:30 IST" name="setUp" finished-at="2023-11-30T16:34:36 IST" duration-ms="6610" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:27:02 IST" name="setUp" finished-at="2023-12-13T19:27:13 IST" duration-ms="11715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyManualRegistrionOfPassenger()[pri:1, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:36 IST" name="verifyManualRegistrionOfPassenger" finished-at="2023-11-30T16:34:52 IST" duration-ms="15293" status="PASS">
+        <test-method signature="verifyManualRegistrionOfPassenger()[pri:2, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:27:13 IST" name="verifyManualRegistrionOfPassenger" finished-at="2023-12-13T19:27:45 IST" duration-ms="31872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyManualRegistrionOfPassenger -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:52 IST" name="tearDown" finished-at="2023-11-30T16:34:52 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:27:45 IST" name="tearDown" finished-at="2023-12-13T19:27:45 IST" duration-ms="260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:52 IST" name="setUp" finished-at="2023-11-30T16:34:58 IST" duration-ms="6562" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:27:45 IST" name="setUp" finished-at="2023-12-13T19:27:53 IST" duration-ms="7263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyNewRegCount()[pri:2, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:34:58 IST" name="verifyNewRegCount" finished-at="2023-11-30T16:35:17 IST" duration-ms="18377" status="PASS">
+        <test-method signature="verifyValidationOfFlightAndLastName()[pri:2, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:27:53 IST" name="verifyValidationOfFlightAndLastName" finished-at="2023-12-13T19:28:09 IST" duration-ms="16803" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNewRegCount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6e20b53a]" started-at="2023-11-30T16:35:17 IST" name="tearDown" finished-at="2023-11-30T16:35:17 IST" duration-ms="168" status="PASS">
+        </test-method> <!-- verifyValidationOfFlightAndLastName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:28:09 IST" name="tearDown" finished-at="2023-12-13T19:28:10 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:28:10 IST" name="setUp" finished-at="2023-12-13T19:28:17 IST" duration-ms="7025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyValidationOnReqdFields()[pri:2, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:28:17 IST" name="verifyValidationOnReqdFields" finished-at="2023-12-13T19:28:31 IST" duration-ms="13821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidationOnReqdFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loungePro.testcases.RegistrationTest@6aba2b86]" started-at="2023-12-13T19:28:31 IST" name="tearDown" finished-at="2023-12-13T19:28:31 IST" duration-ms="255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

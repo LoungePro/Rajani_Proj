@@ -5,8 +5,7 @@
     <classes>
       <class name="loungePro.testcases.RegistrationTest">
         <methods>
-          <include name="verifyOldRegCount"/>
-          <include name="verifyNewRegCount"/>
+          <include name="verifyCancelButton"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

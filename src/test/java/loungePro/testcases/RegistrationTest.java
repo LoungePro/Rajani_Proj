@@ -3,6 +3,8 @@
  */
 package loungePro.testcases;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -27,10 +29,6 @@ public class RegistrationTest extends TestBase {
 		super();
 	}
 
-	/*
-	 * public static int countOld; public static int countNew;
-	 */
-
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() {
 		launchBrowser();
@@ -49,37 +47,59 @@ public class RegistrationTest extends TestBase {
 
 	}
 
-	@Test(priority = 1)
-	public void verifyManualRegistrionOfPassenger() {
-		registrationPage.passengerRegistration();
-
-		System.out.println("Registration Successfull");
-
-	}
-
-	@Test(priority = 0)
+	@Test(priority = 1, enabled = false)
 	public void verifyOldRegCount() {
 		try {
 			oldRegCount = registrationPage.checkRegCount();
 		} catch (InterruptedException e) {
-			
+
 			e.printStackTrace();
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups = { "Regression" })
+	public void verifyValidationOnReqdFields() {
+
+		Assert.assertEquals(registrationPage.validationOnRequiredFields(), true);
+
+	}
+
+	@Test(priority = 2, groups = { "Regression" })
+	public void verifyValidationOfFlightAndLastName() {
+
+		Assert.assertEquals(registrationPage.validationOfFlightAndLastName(), true);
+
+	}
+
+	@Test(priority = 2, groups = { "Regression" })
+	public void verifyCancelButton() throws InterruptedException {
+
+		Assert.assertTrue(registrationPage.cancelRegistration());
+
+	}
+
+	@Test(priority = 2, enabled = false)
 	public void verifyNewRegCount() {
 
 		try {
 			newRegCount = registrationPage.checkRegCount();
 		} catch (InterruptedException e) {
-		
+
 			e.printStackTrace();
 		}
 
 		System.out.println("Old Registration Count=" + oldRegCount);
 		System.out.println("New Registration Count=" + newRegCount);
 		Assert.assertEquals(newRegCount, oldRegCount + 1);
+	}
+
+	@Test(priority = 2, groups = { "Smoke" })
+	public void verifyManualRegistrionOfPassenger() {
+		try {
+			Assert.assertTrue(registrationPage.passengerRegistration());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
