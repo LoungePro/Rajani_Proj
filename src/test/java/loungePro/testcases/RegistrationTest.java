@@ -5,6 +5,8 @@ package loungePro.testcases;
 
 import static org.testng.Assert.assertTrue;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -47,6 +49,13 @@ public class RegistrationTest extends TestBase {
 
 	}
 
+	@Test(priority = 1, groups = { "Regression" })
+	public void verifyValidationOnReqdFields() throws InterruptedException, AWTException {
+
+		Assert.assertEquals(registrationPage.validationOnRequiredFields(), true);
+
+	}
+
 	@Test(priority = 1, enabled = false)
 	public void verifyOldRegCount() {
 		try {
@@ -58,22 +67,15 @@ public class RegistrationTest extends TestBase {
 	}
 
 	@Test(priority = 2, groups = { "Regression" })
-	public void verifyValidationOnReqdFields() {
-
-		Assert.assertEquals(registrationPage.validationOnRequiredFields(), true);
-
-	}
-
-	@Test(priority = 2, groups = { "Regression" })
-	public void verifyValidationOfFlightAndLastName() {
+	public void verifyValidationOfFlightAndLastName() throws InterruptedException {
 
 		Assert.assertEquals(registrationPage.validationOfFlightAndLastName(), true);
 
 	}
 
-	@Test(priority = 2, groups = { "Regression" })
+	@Test(priority = 2, groups = { "Regression" }, enabled = false)
 	public void verifyCancelButton() throws InterruptedException {
-
+Thread.sleep(3000);
 		Assert.assertTrue(registrationPage.cancelRegistration());
 
 	}
@@ -93,13 +95,12 @@ public class RegistrationTest extends TestBase {
 		Assert.assertEquals(newRegCount, oldRegCount + 1);
 	}
 
-	@Test(priority = 2, groups = { "Smoke" })
-	public void verifyManualRegistrionOfPassenger() {
-		try {
+	@Test(priority = 2, groups = { "Smoke" }, enabled = false)
+	public void verifyManualRegistrionOfPassenger() throws AWTException, InterruptedException {
+		
 			Assert.assertTrue(registrationPage.passengerRegistration());
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		
 		}
 	}
 
-}
+

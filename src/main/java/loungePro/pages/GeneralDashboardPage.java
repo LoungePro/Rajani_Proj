@@ -32,7 +32,7 @@ public class GeneralDashboardPage extends TestBase {
 	@CacheLookup
 	Set<WebElement> noOfCompanies;
 
-	@FindBy(xpath = "//span[text()='General DashBoard']")
+	@FindBy(xpath = "//span[text()='General Dashboard']")
 	@CacheLookup
 	WebElement generalDashBoard;
 

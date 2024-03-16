@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [RegressionSuite]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)(failed)">
+    <classes>
+      <class name="loungePro.testcases.DailyManagerLogTest">
+        <methods>
+          <include name="verifyNewlyAddedManagerLogEntries" invocation-numbers="2 3 4"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyNumberOfItems"/>
+        </methods>
+      </class> <!-- loungePro.testcases.DailyManagerLogTest -->
+      <class name="loungePro.testcases.DailyLogTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyDailylogByManager" invocation-numbers="0 1 2 3 4"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- loungePro.testcases.DailyLogTest -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [RegressionSuite]]] -->

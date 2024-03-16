@@ -3,10 +3,16 @@
  */
 package loungePro.pages;
 
+import java.time.Duration;
+
+import org.apache.commons.math3.analysis.function.Exp;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import loungePro.base.TestBase;
 import loungePro.utilities.Utility;
@@ -49,10 +55,35 @@ public class LogInPage extends TestBase {
 
 	public SuperAdminDashboardPage checkIn(String uName, String pass) {
 		userName.sendKeys(uName);
-
+		System.out.println("username entered");
 		userPassword.sendKeys(pass);
 		Utility.clickElement(logInButton);
 		return new SuperAdminDashboardPage();
+	}
+
+	public String checkInWithWrongUserIDAndPassword(String uName, String pass) throws InterruptedException {
+		Utility.waitUntilElementLocated(By.xpath("//input[@id='b2-Input_Username']"));
+		userName.sendKeys(uName);
+		userPassword.sendKeys(pass);
+		Utility.clickElement(logInButton);
+		Utility.waitUntilElementLocated(By.xpath("//div[@class='feedback-message-text']"));
+		return driver.findElement(By.xpath("//div[@class='feedback-message-text']")).getText();
+	}
+
+	public String checkInWithNoPasswordEntered(String uName, String pass) throws InterruptedException {
+
+		Utility.waitUntilElementLocated(By.xpath("//input[@id='b2-Input_Username']"));
+		userName.sendKeys(uName);
+		Utility.clickElement(logInButton);
+		Utility.waitUntilElementLocated(By.xpath("//div[@class='feedback-message-text']"));
+		return driver.findElement(By.xpath("//div[@class='feedback-message-text']")).getText();
+	}
+
+	public String checkInWithNoCredentialsEntered(String uName, String pass) throws InterruptedException {
+		Utility.waitUntilElementLocated(By.xpath("//button[text()='Login']"));
+		Utility.clickElement(logInButton);
+		Utility.waitUntilElementLocated(By.xpath("//div[@class='feedback-message-text']"));
+		return driver.findElement(By.xpath("//div[@class='feedback-message-text']")).getText();
 	}
 
 	public String getParagraphText() {
