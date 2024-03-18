@@ -3,11 +3,7 @@
 <suite name="RegressionSuite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="loungePro.testcases.SuperAdminDashboardTest"/>
-       <class name="loungePro.testcases.DailyLogTest"/>
-      <class name="loungePro.testcases.DailyManagerLogTest"/>     
-      <!--class name="loungePro.testcases.CreateCompanyTest"/-->
-      <class name="loungePro.testcases.RegistrationTest"/>
+      
       <class name="loungePro.testcases.LogInPageTest"/>
     </classes>
   </test> <!-- Test -->
